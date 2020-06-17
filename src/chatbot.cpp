@@ -79,10 +79,10 @@ ChatBot& ChatBot::operator=(const ChatBot& obj) {
 
 ChatBot::ChatBot(ChatBot &&obj) {
     std::cout << "ChatBot move constuctor\n";
-    _currentNode = nullptr;
-    _rootNode = nullptr;
-    _chatLogic = nullptr;
-    _image = NULL;
+    // _currentNode = nullptr;
+    // _rootNode = nullptr;
+    // _chatLogic = nullptr;
+    // _image = NULL;
     _currentNode = obj._currentNode;
     _rootNode = obj._rootNode;
     _chatLogic = obj._chatLogic;
@@ -97,14 +97,14 @@ ChatBot::ChatBot(ChatBot &&obj) {
 ChatBot& ChatBot::operator=(ChatBot&& obj) {
     std::cout << "ChatBot move assigment operator\n";
     if (this != &obj) {
-        delete _currentNode;
-        delete _rootNode;
-        delete _chatLogic;
+        // delete _currentNode;
+        // delete _rootNode;
+        // delete _chatLogic;
         delete _image;
-        _currentNode = nullptr;
-        _rootNode = nullptr;
-        _chatLogic = nullptr;
-        _image = NULL;
+        // _currentNode = nullptr;
+        // _rootNode = nullptr;
+        // _chatLogic = nullptr;
+        // _image = NULL;
         _currentNode = obj._currentNode;
         _rootNode = obj._rootNode;
         _chatLogic = obj._chatLogic;
@@ -167,6 +167,7 @@ void ChatBot::SetCurrentNode(GraphNode *node)
     std::string answer = answers.at(dis(generator));
 
     // send selected node answer to user
+    _chatLogic->SetChatbotHandle(this);
     _chatLogic->SendMessageToUser(answer);
 }
 
