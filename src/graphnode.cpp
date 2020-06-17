@@ -1,17 +1,21 @@
 #include "graphedge.h"
 #include "graphnode.h"
 
+#include <iostream>
+
 GraphNode::GraphNode(int id)
 {
+    std::cout << "GraphNode constructor\n";
     _id = id;
 }
 
 GraphNode::~GraphNode()
 {
+    std::cout << "GraphEdge deconstructor\n";
     //// STUDENT CODE
     ////
 
-    delete _chatBot; 
+    // delete _chatBot; 
 
     ////
     //// EOF STUDENT CODE

@@ -14,6 +14,7 @@
 
 ChatLogic::ChatLogic()
 {
+    std::cout << "Chatlogic constructor\n";
     //// STUDENT CODE
     ////
 
@@ -29,6 +30,7 @@ ChatLogic::ChatLogic()
 
 ChatLogic::~ChatLogic()
 {
+    std::cout << "Chatlogic deconstructor\n";
     //// STUDENT CODE
     ////
 
