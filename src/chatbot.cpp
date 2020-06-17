@@ -50,8 +50,8 @@ ChatBot::ChatBot(const ChatBot &obj) {
     _rootNode = nullptr;
     _chatLogic = nullptr;
     _image = NULL;
-    _currentNode = new GraphNode(*obj._currentNode);
-    _rootNode = new GraphNode(*obj._rootNode);
+    _currentNode = obj._currentNode;
+    _rootNode = obj._rootNode;
     _chatLogic = obj._chatLogic;
     _image = new wxBitmap(*obj._image);
 }
@@ -68,8 +68,8 @@ ChatBot& ChatBot::operator=(const ChatBot& obj) {
         _rootNode = nullptr;
         _chatLogic = nullptr;
         _image = NULL;
-        _currentNode = new GraphNode(*obj._currentNode);
-        _rootNode = new GraphNode(*obj._rootNode);
+        _currentNode = obj._currentNode;
+        _rootNode = obj._rootNode;
         _chatLogic = obj._chatLogic;
         _image = new wxBitmap(*obj._image);
     }
